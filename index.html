@@ -7492,4 +7492,172 @@ html[data-aniimo-theme="light"] #collection #creatures.grid[data-layout="cards"]
  screen.addEventListener('change',()=>{write(mode+'-layout',data.collectionView.layout);mode=screen.matches?'desktop':'mobile';const next=read(mode+'-layout',initialLayout);if(!screen.matches){$('desktopBrowse')?.remove();$('desktopUndo')?.remove();focusFilter='';if($('modal').classList.contains('desktop-drawer'))closeDialog();}if(validLayout(next))data.collectionView.layout=next;syncLegacy();render()});
  render();
 })();
+</script><style id="pc-information-style">@media(min-width:1024px){
+ body #collection#collection #pcStickyTools{grid-column:1/-1;position:sticky;top:10px;z-index:110;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;align-items:start;padding:12px;margin:0 0 14px;background:var(--bg);border:1px solid var(--line);border-radius:15px;box-shadow:0 8px 24px #0002;}
+ body #collection#collection #pcStickyTools>.toolbar{grid-column:span 6!important;display:grid!important;grid-template-columns:minmax(0,1.4fr) minmax(140px,1fr);margin:0!important;position:relative;}
+ body #collection#collection #pcStickyTools>.collection-filters{grid-column:span 4!important;margin:0!important;}
+ body #collection#collection #pcStickyTools>.layout-toolbar{grid-column:span 2!important;margin:0!important;justify-content:flex-end!important;}
+ .pc-gallery-choice{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:13px;cursor:pointer;}.pc-gallery-choice input{accent-color:var(--green);width:16px;height:16px;}
+ body #collection#collection #creatures.grid.pc-information-view article.creature.pc-info-card{display:flex!important;flex-direction:column!important;height:auto!important;min-height:0!important;grid-template-columns:none!important;grid-template-rows:none!important;cursor:pointer;position:relative;border-radius:16px!important;overflow:visible!important;background:var(--panel)!important;}
+ body #collection#collection #creatures.grid.pc-information-view article.creature.pc-info-card[hidden]{display:none!important;}
+ body #collection#collection #creatures .pc-head{display:grid!important;grid-template-columns:64px minmax(0,1fr) 26px;gap:12px;align-items:center;padding:16px;border-bottom:1px solid var(--line);min-height:114px;}
+ body #collection#collection #creatures .pc-avatar{position:relative!important;width:64px!important;height:78px!important;display:block!important;border:0!important;border-radius:10px!important;overflow:hidden!important;background:var(--panel2)!important;padding:0!important;}
+ body #collection#collection #creatures .pc-avatar :is(.pc-avatar-window,.art-window){position:relative!important;inset:auto!important;width:100%!important;height:100%!important;min-height:0!important;max-height:100%!important;aspect-ratio:auto!important;transform:none!important;border:0!important;border-radius:0!important;padding:0!important;margin:0!important;display:flex!important;align-items:center!important;justify-content:center!important;}
+ body #collection#collection #creatures .pc-avatar img.creature-art{position:static!important;inset:auto!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;transform:none!important;}
+ .pc-avatar .art-caption{display:none!important;}.pc-identity{min-width:0;}.pc-index{display:block;font-size:10px;font-weight:650;letter-spacing:.08em;color:var(--muted);margin-bottom:5px;}
+ body #collection#collection #creatures .pc-title{display:block;width:100%;margin:0 0 7px;padding:0;border:0;background:none;text-align:left;color:var(--text);font-size:19px;line-height:1.2;font-weight:750;overflow-wrap:anywhere;}
+ .pc-role .combat-role-line{padding:0!important;margin:0!important;min-height:0!important;}.pc-role .combat-role-tag{font-size:10px!important;padding:3px 6px!important;}.pc-role .combat-role-symbol svg{width:12px!important;height:12px!important;}
+ .pc-favorite{align-self:start;border:0;background:none;color:var(--muted);padding:2px;font-size:24px;line-height:1;}.pc-favorite[aria-pressed=true]{color:var(--yellow);}
+ .pc-content{padding:14px 16px;display:grid;gap:16px;flex:1;}.pc-profile-group,.pc-equipment-group,.pc-capability-group{min-width:0;}
+ .pc-state{font-size:12px;font-weight:700;margin-bottom:12px;}.pc-state.complete{color:var(--green);}.pc-state.progress{color:var(--yellow);}.pc-state.uncaught{color:var(--muted);}
+ .pc-label{display:block;color:var(--muted);font-size:10px;font-weight:650;letter-spacing:.065em;text-transform:uppercase;line-height:1.35;}
+ .pc-section-line{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px;}
+ .pc-step-strip{display:flex;gap:5px;margin:9px 0 12px;}.pc-step{position:relative;flex:1;height:7px;min-height:7px;padding:0;border:0;border-radius:10px;background:var(--line);cursor:pointer;}.pc-step.is-done{background:var(--green);}
+ .pc-step::before{content:'';position:absolute;inset:-6px 0;}.pc-step-tip{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);display:none;z-index:130;width:190px;padding:9px 11px;border:1px solid var(--line);background:var(--panel2);color:var(--text);font-size:12px;line-height:1.4;border-radius:8px;box-shadow:0 6px 18px #0003;font-weight:500;}.pc-step:hover .pc-step-tip,.pc-step:focus-visible .pc-step-tip{display:block;}
+ .pc-facts{display:flex;flex-wrap:wrap;gap:5px 12px;font-size:12px;color:var(--text);}.pc-facts .unknown{color:var(--muted);}
+ .pc-equipment-group>.pc-label{margin-bottom:9px;}.pc-item-row{display:flex;align-items:center;gap:9px;width:100%;padding:0;border:0;background:none;color:var(--text);text-align:left;}
+ body #collection#collection #creatures .pc-item-icon{width:36px!important;height:40px!important;flex:0 0 36px;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden;border-radius:8px;background:var(--panel2);}
+ body #collection#collection #creatures .pc-item-icon :is(img,svg){width:100%!important;height:100%!important;max-width:36px!important;max-height:40px!important;object-fit:contain!important;}
+ .pc-item-copy{min-width:0;display:grid;gap:5px;}.pc-item-copy>strong{font-size:13px;line-height:1.3;overflow-wrap:anywhere;}.pc-item-status{font-size:11px;line-height:1.4;}.pc-item-status.complete{color:var(--green);}.pc-item-status.ready{color:var(--ui-accent,var(--green));}.pc-item-status.missing{color:var(--yellow);}.pc-item-status.neutral{color:var(--muted);}
+ .pc-bound-list{font-size:11px;line-height:1.45;color:var(--muted);margin:9px 0 0;overflow-wrap:anywhere;}
+ .pc-location{margin-top:14px;}.pc-location>.pc-label{margin-bottom:6px;}.pc-location-link .bloom-acquisition-link{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:4px!important;position:relative;width:100%;padding:0 12px 0 0;border:0;background:none;color:var(--muted);font-size:12px;text-align:left;line-height:1.4;}.pc-location-link .bloom-info-chevron{position:absolute;right:0;top:50%;}.pc-location-link .origin-world{display:flex;gap:4px;}
+ .pc-uncaught-note,.pc-unknown{color:var(--muted);font-size:12px;line-height:1.55;margin:8px 0 0;}
+ .pc-checklist{display:none;}.pc-check-task{display:block;border:0;background:none;padding:5px 0;text-align:left;color:var(--muted);font-size:12px;line-height:1.4;}.pc-check-task.done{color:var(--green);}
+ .pc-capability-group{display:none;}.pc-stat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:12px;}.pc-stat-grid>div{display:grid;gap:6px;border:1px solid var(--line);padding:9px;border-radius:8px;}.pc-stat-grid span{font-size:10px;color:var(--muted);}.pc-stat-grid strong{font-size:12px;white-space:nowrap;font-variant-numeric:tabular-nums;}.pc-stat-legend{font-size:10px;color:var(--muted);margin:8px 0 0;}
+ .pc-footer{margin-top:auto;padding:12px 16px;border-top:1px solid var(--line);display:flex;gap:12px;align-items:center;justify-content:space-between;}.pc-next-copy{min-width:0;}.pc-next-copy>span:last-child{display:block;font-size:12px;line-height:1.4;margin-top:5px;color:var(--muted);overflow-wrap:anywhere;}.pc-primary-action{flex-shrink:0;border:1px solid var(--line);background:var(--ui-accent-soft,var(--panel2));color:var(--ui-accent,var(--green));padding:9px 11px;border-radius:9px;font-size:12px;font-weight:650;line-height:1.35;}
+ /* Four across: compact information lanes, with small identity portraits. */
+ body #collection#collection #creatures.grid[data-layout=compact] .pc-head{grid-template-columns:48px minmax(0,1fr) 22px;gap:9px;padding:14px;min-height:108px;}
+ body #collection#collection #creatures.grid[data-layout=compact] .pc-avatar{width:48px!important;height:64px!important;}
+ body #collection#collection #creatures.grid[data-layout=compact] .pc-title{font-size:17px;}
+ body #collection#collection #creatures.grid[data-layout=compact] .pc-content{padding:14px;grid-template-rows:minmax(90px,auto) 1fr;gap:14px;}
+ body #collection#collection #creatures.grid[data-layout=compact] .pc-content>.pc-equipment-group{border-top:1px solid var(--line);padding-top:12px;}
+ body #collection#collection #creatures.grid[data-layout=compact] .pc-info-card[data-state=none] .pc-content{grid-template-rows:minmax(54px,auto) 1fr;}
+ body #collection#collection #creatures.grid[data-layout=compact] .pc-info-card:not([data-state=none]) .pc-location{display:none;}
+ body #collection#collection #creatures.grid[data-layout=compact] .pc-footer{padding:12px 14px;display:grid;grid-template-columns:1fr;gap:10px;min-height:110px;}
+ body #collection#collection #creatures.grid[data-layout=compact] .pc-primary-action{width:100%;}
+ /* Two across: profile and equipment sit alongside each other. */
+ body #collection#collection #creatures.grid[data-layout=cards] .pc-content{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
+ body #collection#collection #creatures.grid[data-layout=cards] .pc-equipment-group{border-left:1px solid var(--line);padding-left:18px;}
+ /* One across: full review with checklist and confirmed capability values. */
+ body #collection#collection #creatures.grid[data-layout=large] article.creature.pc-info-card{display:grid!important;grid-template-columns:230px minmax(0,1fr)!important;grid-template-rows:1fr auto!important;}
+ body #collection#collection #creatures.grid[data-layout=large] .pc-head{grid-column:1;grid-row:1;grid-template-columns:78px minmax(0,1fr) 22px;gap:10px;align-content:start;padding:20px 16px;border-bottom:0;border-right:1px solid var(--line);}
+ body #collection#collection #creatures.grid[data-layout=large] .pc-avatar{width:78px!important;height:96px!important;}
+ body #collection#collection #creatures.grid[data-layout=large] .pc-head{grid-template-columns:78px minmax(0,1fr);}
+ body #collection#collection #creatures.grid[data-layout=large] .pc-favorite{grid-column:1;grid-row:2;justify-self:start;}
+ body #collection#collection #creatures.grid[data-layout=large] .pc-title{font-size:20px;}
+ body #collection#collection #creatures.grid[data-layout=large] .pc-content{grid-column:2;grid-row:1;grid-template-columns:1fr 1fr 1.2fr;padding:20px;gap:20px;}
+ body #collection#collection #creatures.grid[data-layout=large] .pc-equipment-group,body #collection#collection #creatures.grid[data-layout=large] .pc-capability-group{border-left:1px solid var(--line);padding-left:18px;}
+ body #collection#collection #creatures.grid[data-layout=large] .pc-checklist{display:block;margin-top:12px;}
+ body #collection#collection #creatures.grid[data-layout=large] .pc-capability-group{display:block;}
+ body #collection#collection #creatures.grid[data-layout=large] .pc-footer{grid-column:1/-1;grid-row:2;}
+ body #collection#collection #creatures .pc-info-card:hover{box-shadow:0 4px 18px #0002!important;}
+ @media(max-width:1199px){
+ body #collection#collection #pcStickyTools>.toolbar{grid-column:span 7!important;}body #collection#collection #pcStickyTools>.collection-filters{grid-column:span 5!important;}body #collection#collection #pcStickyTools>.layout-toolbar{grid-column:1/-1!important;}
+ body #collection#collection #creatures.grid[data-layout=large] article.creature.pc-info-card{grid-template-columns:200px minmax(0,1fr)!important;}
+ body #collection#collection #creatures.grid[data-layout=large] .pc-content{grid-template-columns:1fr 1fr;}
+ body #collection#collection #creatures.grid[data-layout=large] .pc-capability-group{grid-column:1/-1;border-left:0;border-top:1px solid var(--line);padding:14px 0 0;}
+ }
+}
+@media(min-width:1024px){
+ body #collection#collection #creatures.grid[data-layout=large] .pc-head{grid-template-columns:78px minmax(0,1fr);gap:12px;}
+ body #collection#collection #creatures.grid[data-layout=large] .pc-identity{grid-column:1/-1;grid-row:2;}
+ body #collection#collection #creatures.grid[data-layout=large] .pc-favorite{grid-column:2;grid-row:1;justify-self:end;}
+ body #collection#collection #creatures.grid[data-layout=large] .pc-title{overflow-wrap:normal;word-break:normal;}
+ .pc-location-link button{font:inherit!important;background:transparent!important;border:0!important;color:inherit!important;text-align:left!important;line-height:1.4!important;}
+ .pc-location-link .bloom-acquisition-sublink{padding:0!important;display:flex;gap:5px;align-items:center;}
+ .pc-location-link .bloom-world-trigger{padding:0!important;}
+ .pc-location-link .origin-bloom{display:block;margin-top:4px;}
+ body #collection#collection #creatures.grid[data-layout=compact] .pc-head{padding:12px 14px;min-height:96px;}
+ body #collection#collection #creatures.grid[data-layout=compact] .pc-content{padding:12px 14px;gap:12px;grid-template-rows:minmax(80px,auto) 1fr;}
+ body #collection#collection #creatures.grid[data-layout=compact] .pc-footer{min-height:96px;padding:10px 14px;gap:8px;}
+ body #collection#collection #creatures.grid[data-layout=compact] .pc-state{margin-bottom:9px;}
+ body #collection#collection #creatures.grid[data-layout=compact] .pc-location{margin-top:10px;}
+ body:has(#modal.desktop-drawer:not(.hide)) #collection#collection #creatures.grid[data-layout=large] .pc-content{grid-template-columns:1fr 1fr;}
+ body:has(#modal.desktop-drawer:not(.hide)) #collection#collection #creatures.grid[data-layout=large] .pc-capability-group{grid-column:1/-1;border-left:0;border-top:1px solid var(--line);padding:12px 0 0;}
+}
+</style><script id="pc-information-cards">/* Information-focused cards, exclusively on desktop. Reuses all existing editors. */
+(()=>{
+ const mq=matchMedia('(min-width:1024px)'),$=id=>document.getElementById(id),key=SAVE_KEY+'::pc-gallery';
+ let gallery=false;try{gallery=localStorage.getItem(key)==='1'}catch{}
+ const baseRender=window.render;
+ const meta=document.querySelector('.collection-meta>span:first-child'),metaText=meta?.textContent,hint=document.querySelector('.explore-heading-hint'),hintText=hint?.textContent;
+ function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n}
+ function btn(text,action,cls){const n=el('button',cls,text);n.type='button';n.onclick=e=>{e.stopPropagation();action()};return n}
+ function html(cls,markup){const n=el('div',cls);n.innerHTML=markup;return n}
+ function taskAction(c,t){if(t.tab==='personality'){openPersonalityFromCard(c.name);return}desktopOpen(c.name,t.tab)}
+ function nextAction(c,steps){
+  if(!c.caught)return {label:'Mark caught',hint:'Start your personal profile',run:()=>toggleCaught(c.name)};
+  if(!c.alpha&&c.ideal&&!hasBinding(c,c.ideal)&&available(c.ideal)>0)return {label:'Review binding',hint:'Item owned · ready to bind',run:()=>desktopOpen(c.name,'item')};
+  const next=steps.find(t=>!t.done);
+  if(next){if(next.tab==='item'&&c.ideal&&available(c.ideal)<1)return {label:'View item source',hint:'Obtain '+c.ideal,run:()=>openMissingHeldItem(c.name,c.ideal)};
+   return {label:({'appearance':'Choose appearance','personality':'Set personality','build':'Confirm capability points','item':'Review held items'})[next.tab]||'Continue setup',hint:next.label,run:()=>taskAction(c,next)};
+  }
+  return {label:speciesRules(c).buildEligible===false?'View details':'View build',hint:'Profile configured',run:()=>desktopOpen(c.name,speciesRules(c).buildEligible===false?'overview':'build')};
+ }
+ function progress(c,steps){
+  const done=steps.filter(t=>t.done).length,root=el('div','pc-progress');
+  const head=el('div','pc-section-line');head.append(el('span','pc-label','Profile progress'),el('strong','',done+' / '+steps.length));root.append(head);
+  const strip=el('div','pc-step-strip');strip.setAttribute('role','group');strip.setAttribute('aria-label','Profile steps');
+  for(const task of steps){const b=btn('',()=>taskAction(c,task),'pc-step'+(task.done?' is-done':''));const label=task.label+': '+(task.done?'complete':'not complete');b.setAttribute('aria-label',label);b.title=label;b.append(el('span','pc-step-tip',label));strip.append(b)}root.append(strip);return root;
+ }
+ function equipment(c){
+  const root=el('div','pc-equipment-group'),owned=c.ideal?Number(data.items[c.ideal]||0):0,free=c.ideal?Math.max(0,available(c.ideal)):0;
+  root.append(el('span','pc-label',c.caught?'Recommended equipment':'Equipment to collect'));
+  const bound=c.ideal&&hasBinding(c,c.ideal),label=bound?'Bound':c.alpha?'Alpha · binding optional':free>0?'Owned · ready to bind':owned>0?'Copies allocated · need another':'Item missing';
+  const row=btn('',()=>desktopOpen(c.name,'item'),'pc-item-row');
+  if(c.ideal)row.append(html('pc-item-icon',heldThumb(c.ideal)));
+  const copy=el('span','pc-item-copy');copy.append(el('strong','',c.ideal||'Recommendation not verified'),el('span','pc-item-status '+(bound?'complete':c.alpha?'neutral':free>0?'ready':'missing'),label));row.append(copy);root.append(row);
+  if(c.caught){const bindings=boundList(c);if(bindings.length){root.append(el('p','pc-bound-list','Bound: '+bindings.join(', ')))}else root.append(el('p','pc-bound-list',c.alpha?'No binding required for Alpha':'No held items bound'));}
+  const source=el('div','pc-location');source.append(el('span','pc-label',c.caught?'Acquisition':'Where to find'));source.append(html('pc-location-link',cardBloomLocation(c)));root.append(source);
+  return root;
+ }
+ function capabilities(c){
+  const root=el('div','pc-capability-group');root.append(el('span','pc-label','Capability points'));
+  const b=data.builds?.[c.name];
+  if(speciesRules(c).buildEligible===false){root.append(el('p','pc-unknown','Capability builds do not apply to this form.'));return root}
+  if(!b?.userConfirmedBuild){root.append(el('p','pc-unknown',c.caught?'Capability points not confirmed':'Catch this Aniimo to record a build.'));return root}
+  const grid=el('div','pc-stat-grid');['ATK','REGEN','BREAK','P.DEF','M.DEF','HP'].forEach((name,i)=>{const stat=el('div');stat.append(el('span','',name),el('strong','',`${b.innate?.[i]??'—'} / ${b.spent?.[i]??'—'} / ${b.bonuses?.[i]??'—'}`));grid.append(stat)});root.append(grid,el('p','pc-stat-legend','Innate / acquired / bonus'));
+  if(b.capafruit)root.append(el('p','pc-stat-legend','Capafruit recorded'));
+  return root;
+ }
+ function card(article,c){
+  article.classList.add('pc-info-card');article.removeAttribute('onclick');article.setAttribute('aria-label',displayName(c)+' · Open details');article.tabIndex=0;
+  article.onclick=e=>{if(!e.target.closest('button,input,a,select'))desktopOpen(c.name)};
+  article.onkeydown=e=>{if(e.target===article&&(e.key==='Enter'||e.key===' ')){e.preventDefault();desktopOpen(c.name)}};
+  const all=profileChecklist(c),steps=speciesRules(c).buildEligible===false?all.filter(t=>t.tab==='collection'||t.tab==='appearance'):all;
+  const done=profileFullyDone(c),head=el('div','pc-head');
+  const avatar=btn('',()=>desktopOpen(c.name),'pc-avatar');avatar.setAttribute('aria-label','Open '+displayName(c)+' details');avatar.append(html('pc-avatar-window',portraitFor(c)));head.append(avatar);
+  const identity=el('div','pc-identity');identity.append(el('span','pc-index','ANIILOG '+numberFor(c)+(c.alpha?' · ALPHA':'')));
+  const title=btn(done?personalizedName(c):displayName(c),()=>done?renameCompanion(c.name):desktopOpen(c.name),'pc-title');title.title=done?'Rename '+title.textContent:title.textContent;if(done)title.setAttribute('aria-label','Rename '+title.textContent);identity.append(title,html('pc-role',combatRoleCard(c)));head.append(identity);
+  const fav=btn(c.favorite?'★':'☆',()=>toggleFavorite(c.name),'pc-favorite');fav.setAttribute('aria-label',(c.favorite?'Remove ':'Add ')+displayName(c)+(c.favorite?' from favorites':' to favorites'));fav.setAttribute('aria-pressed',String(!!c.favorite));head.append(fav);
+  const content=el('div','pc-content'),profile=el('div','pc-profile-group');
+  const state=el('div','pc-state '+(!c.caught?'uncaught':done?'complete':'progress'),!c.caught?'Not caught':done?'✓ Configured':'In progress');profile.append(state);
+  if(c.caught){profile.append(progress(c,steps));const facts=el('div','pc-facts'),personality=personalityGet(c.name),b=data.builds?.[c.name];facts.append(el('span',personality?'':'unknown',personality||'Personality not set'));if(speciesRules(c).buildEligible!==false)facts.append(el('span',Number.isInteger(b?.stars)?'':'unknown',Number.isInteger(b?.stars)?'★ '+b.stars+' stars':'Stars not recorded'));profile.append(facts);
+   const list=el('div','pc-checklist');for(const t of steps){list.append(btn((t.done?'✓ ':'○ ')+t.label,()=>taskAction(c,t),'pc-check-task'+(t.done?' done':'')))}profile.append(list);
+  }else{profile.append(el('p','pc-uncaught-note','Not yet in your collection.'));}
+  content.append(profile,equipment(c),capabilities(c));
+  const footer=el('div','pc-footer'),next=nextAction(c,steps),hint=el('div','pc-next-copy');hint.append(el('span','pc-label',done?'PROFILE READY':'NEXT ACTION'),el('span','',next.hint));footer.append(hint,btn(next.label+' ›',next.run,'pc-primary-action'));
+  article.replaceChildren(head,content,footer);
+ }
+ function toolbar(){
+  if($('pcStickyTools'))return;
+  const controls=document.querySelector('#collection>.toolbar');if(!controls)return;
+  const wrap=el('div','pc-sticky-tools');wrap.id='pcStickyTools';controls.before(wrap);
+  for(const selector of ['#collection>.toolbar','#collection>.collection-filters','#collection>.layout-toolbar']){const node=document.querySelector(selector);if(node)wrap.append(node)}
+ }
+ function ungroup(){const wrap=$('pcStickyTools');if(wrap){while(wrap.firstChild)wrap.before(wrap.firstChild);wrap.remove()}}
+ function update(){
+  if(!mq.matches)return;
+  toolbar();const layout=data.collectionView.layout,root=$('desktopBrowse');
+  const sort=document.querySelector('#desktopBrowse select');if(meta&&sort)meta.textContent=sort.selectedOptions[0]?.textContent||metaText;if(hint)hint.textContent='Select an Aniimo for details';
+  root?.querySelector('.pc-gallery-choice')?.remove();
+  if(layout==='compact'&&root){const label=el('label','pc-gallery-choice'),input=document.createElement('input');input.type='checkbox';input.checked=gallery;input.onchange=()=>{gallery=input.checked;try{localStorage.setItem(key,gallery?'1':'0')}catch{}render()};label.append(input,document.createTextNode('Portrait gallery'));root.append(label)}
+  const grid=$('creatures');grid.classList.toggle('pc-information-view',layout!=='compact'||!gallery);
+  if(layout==='compact'&&gallery)return;
+  for(const article of grid.querySelectorAll('article')){const c=data.creatures.find(c=>c.name===article.dataset.species);if(c)card(article,c)}
+ }
+ window.render=function(...args){const r=baseRender.apply(this,args);update();return r};
+ mq.addEventListener('change',()=>{if(!mq.matches){ungroup();$('creatures').classList.remove('pc-information-view');if(meta)meta.textContent=metaText;if(hint)hint.textContent=hintText}else update()});
+ update();
+})();
 </script></body></html>
