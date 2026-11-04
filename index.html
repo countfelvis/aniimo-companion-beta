@@ -7174,4 +7174,322 @@ html[data-aniimo-theme="light"] #collection #creatures.grid[data-layout="cards"]
 #collection #creatures.grid[data-layout="cards"] article.creature[data-state="progress"]{
  border-color:rgba(222,173,92,.8)!important;
 }
-</style></body></html>
+</style><style id="desktop-responsive-refinement">
+/* Desktop-only presentation. Below 1024px every original rule is preserved. */
+@media (min-width:1024px) {
+ html body {font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif!important;font-size:15px!important;}
+ body :is(button,input,select,textarea){font-family:inherit!important;}
+ body header.app-header, body main.shell {width:calc(100% - 64px)!important;max-width:1440px!important;margin-inline:auto!important;}
+ body header.app-header{padding:22px 0 16px!important;min-height:88px!important;align-items:center!important;}
+ body .app-header #page-title{font-size:28px!important;line-height:1.15!important;margin:5px 0 0!important;}
+ body .app-header .header-actions{gap:8px!important;}
+ body #localSaveStatus{position:static!important;font-size:11px!important;}
+ body main.shell{padding:0 0 40px!important;}
+ body nav#tabs.tabs{position:static!important;inset:auto!important;transform:none!important;width:520px!important;max-width:none!important;margin:0 auto 20px!important;display:grid!important;grid-template-columns:repeat(4,1fr)!important;padding:4px!important;gap:4px!important;z-index:10!important;}
+ body nav#tabs.tabs button{min-height:42px!important;font-size:14px!important;display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:center!important;gap:7px!important;padding:8px 12px!important;}
+ body nav#tabs .nav-symbol,body nav#tabs .nav-symbol svg{width:20px!important;height:20px!important;}
+ body #collection#collection{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 12px;}
+ body #collection#collection.hide{display:none!important;}
+ body #collection#collection>*{grid-column:1/-1;min-width:0;}
+ body #collection#collection .collection-overview{display:grid!important;grid-template-columns:minmax(200px,1fr) minmax(400px,1.25fr);align-items:center!important;gap:8px 24px!important;padding:14px 18px!important;margin:0 0 16px!important;}
+ body #collection#collection .collection-overview-top{margin:0!important;gap:16px!important;}
+ body #collection#collection #collectionProgressLabel{font-size:16px!important;}
+ body #collection#collection .overview-eyebrow{font-size:10px!important;}
+ body #collection#collection .overview-percent{font-size:25px!important;}
+ body #collection#collection .collection-overview .bar{grid-column:1;grid-row:2;}
+ body #collection#collection .collection-dimensions{grid-column:2;grid-row:1/3;margin:0!important;gap:12px!important;}
+ body #collection#collection .collection-dimensions>div{padding:10px 12px!important;gap:9px!important;}
+ body #collection#collection .collection-dimensions strong{font-size:19px!important;}
+ body #collection#collection .collection-dimensions span{font-size:12px!important;}
+ body #collection#collection .collection-section-heading{margin:0 0 12px!important;}
+ body #collection#collection .collection-section-heading small{display:none!important;}
+ body #collection#collection .collection-section-heading h2{font-size:21px!important;}
+ body #collection#collection>.toolbar{grid-column:span 6;display:grid!important;grid-template-columns:minmax(0,1.4fr) minmax(160px,1fr);gap:8px!important;margin:0 0 14px!important;position:relative;}
+ body #collection#collection>.collection-filters{grid-column:span 4;gap:8px!important;margin:0 0 14px!important;align-self:start;}
+ body #collection#collection>.layout-toolbar{grid-column:span 2;display:flex!important;justify-content:flex-end!important;align-self:start;margin:0 0 14px!important;}
+ body #collection#collection .layout-title{display:none!important;}
+ body #collection#collection :is(.input,.region-filter,.favorites-filter){min-height:44px!important;font-size:14px!important;}
+ body #collection#collection .region-filter{flex:1!important;min-width:0!important;}
+ body #collection#collection .region-filter select{font-size:13px!important;}
+ body #collection#collection .layout-segments{padding:3px!important;}
+ body #collection#collection .layout-segments button{min-width:40px!important;min-height:36px!important;}
+ body #collection#collection .collection-explore-heading{margin:2px 0 5px!important;}
+ body #collection#collection .collection-meta{font-size:12px!important;margin-bottom:12px!important;}
+ body #collection#collection #creatures.grid{gap:18px!important;align-items:stretch!important;}
+ body #collection#collection #creatures.grid[data-layout="large"]{grid-template-columns:minmax(0,1fr)!important;}
+ body #collection#collection #creatures.grid[data-layout="cards"]{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+ body #collection#collection #creatures.grid[data-layout="compact"]{grid-template-columns:repeat(4,minmax(0,1fr))!important;}
+ /* Detail cards: a bounded portrait beside content, never an oversized image well. */
+ body #collection#collection #creatures.grid:is([data-layout="large"],[data-layout="cards"]) article.creature{display:grid!important;grid-template-columns:190px minmax(0,1fr)!important;grid-template-rows:auto 1fr!important;align-items:stretch!important;height:auto!important;min-height:0!important;border-radius:18px!important;}
+ body #collection#collection #creatures.grid:is([data-layout="large"],[data-layout="cards"]) article.creature>.card-topline{grid-column:1/-1!important;grid-row:1!important;min-height:52px!important;height:auto!important;padding:10px 14px!important;}
+ body #collection#collection #creatures.grid:is([data-layout="large"],[data-layout="cards"]) article.creature>.portrait{grid-column:1!important;grid-row:2!important;width:auto!important;height:auto!important;min-height:230px!important;max-height:none!important;aspect-ratio:auto!important;align-self:stretch!important;margin:14px 0 14px 14px!important;border-radius:12px!important;overflow:hidden!important;display:flex!important;align-items:center!important;justify-content:center!important;}
+ body #collection#collection #creatures.grid:is([data-layout="large"],[data-layout="cards"]) article.creature>.portrait img.creature-art{width:100%!important;height:230px!important;max-width:100%!important;max-height:280px!important;object-fit:contain!important;transform:none!important;position:static!important;margin:0!important;}
+ body #collection#collection #creatures.grid:is([data-layout="large"],[data-layout="cards"]) article.creature>.body{grid-column:2!important;grid-row:2!important;display:flex!important;flex-direction:column!important;grid-template-rows:none!important;padding:14px!important;gap:10px!important;height:auto!important;min-height:0!important;}
+ body #collection#collection #creatures.grid:is([data-layout="large"],[data-layout="cards"]) article.creature>.body>:is(.card-badges,.card-origin,.held-chip,.card-progress-slot,.cardactions){grid-row:auto!important;flex:0 0 auto!important;height:auto!important;min-height:0!important;max-height:none!important;margin:0!important;}
+ body #collection#collection #creatures.grid:is([data-layout="large"],[data-layout="cards"]) article.creature>.body>.card-badges{display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:6px!important;order:1!important;}
+ body #collection#collection #creatures.grid:is([data-layout="large"],[data-layout="cards"]) article.creature>.body>.card-progress-slot{order:2!important;overflow:visible!important;}
+ body #collection#collection #creatures.grid:is([data-layout="large"],[data-layout="cards"]) article.creature>.body>.card-origin{order:3!important;padding:10px 12px!important;border-radius:11px!important;}
+ body #collection#collection #creatures.grid:is([data-layout="large"],[data-layout="cards"]) article.creature>.body>.held-chip{order:4!important;display:flex!important;padding:10px!important;min-height:66px!important;border-radius:11px!important;}
+ body #collection#collection #creatures.grid:is([data-layout="large"],[data-layout="cards"]) article.creature>.body>.held-chip img{width:44px!important;height:44px!important;object-fit:contain!important;}
+ body #collection#collection #creatures.grid:is([data-layout="large"],[data-layout="cards"]) .held-name{font-size:14px!important;line-height:1.3!important;}
+ body #collection#collection #creatures.grid:is([data-layout="large"],[data-layout="cards"]) .held-meta{font-size:12px!important;}
+ body #collection#collection #creatures.grid:is([data-layout="large"],[data-layout="cards"]) .origin-world{font-size:14px!important;}
+ body #collection#collection #creatures.grid:is([data-layout="large"],[data-layout="cards"]) .origin-bloom{font-size:13px!important;}
+ body #collection#collection #creatures.grid:is([data-layout="large"],[data-layout="cards"]) article.creature>.body>.cardactions{order:5!important;margin-top:auto!important;padding-top:2px!important;display:flex!important;justify-content:flex-end!important;}
+ body #collection#collection #creatures.grid:is([data-layout="large"],[data-layout="cards"]) article.creature>.body>.cardactions .manage-btn{width:112px!important;flex:0 0 112px!important;min-height:36px!important;height:36px!important;font-size:14px!important;}
+ body #collection#collection #creatures.grid[data-layout="cards"] article.creature .card-topline :is(.completed-custom-name,.incomplete-header-name){font-size:19px!important;}
+ body #collection#collection #creatures.grid[data-layout="large"] article.creature{grid-template-columns:230px minmax(0,1fr)!important;}
+ body #collection#collection #creatures.grid[data-layout="large"] article.creature>.body>.card-name-row{margin:0!important;}
+ body #collection#collection #creatures.grid[data-layout="large"] .name{font-size:24px!important;}
+ body #collection#collection #creatures.grid[data-layout="large"] article.creature>.body>.finish-reminder{margin:0!important;padding:10px 12px!important;min-height:0!important;}
+ /* Gallery stays four across, with consistent framing and readable captions. */
+ body #collection#collection #creatures.grid[data-layout="compact"] article.creature{min-height:0!important;height:auto!important;display:flex!important;border-radius:16px!important;}
+ body #collection#collection #creatures.grid[data-layout="compact"] article.creature>.portrait{width:100%!important;height:clamp(180px,18vw,250px)!important;min-height:0!important;max-height:250px!important;aspect-ratio:auto!important;margin:0!important;padding:10px!important;}
+ body #collection#collection #creatures.grid[data-layout="compact"] .portrait img.creature-art{width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;transform:none!important;}
+ body #collection#collection #creatures.grid[data-layout="compact"] article.creature>.body{padding:14px 12px!important;min-height:56px!important;display:flex!important;justify-content:center!important;}
+ body #collection#collection #creatures.grid[data-layout="compact"] .name{font-size:17px!important;line-height:1.3!important;margin:0!important;}
+ /* Inventory: compact controls and four useful columns. */
+ body #items .section-intro{margin:0 0 10px!important;display:inline-flex!important;}
+ body #items .bulk-inventory-entry{float:right;margin:0 0 12px!important;}
+ body #items .equipment-dashboard{clear:both;display:grid!important;grid-template-columns:minmax(0,1fr) auto;gap:12px 16px!important;padding:16px!important;margin:0 0 18px!important;}
+ body #items .equipment-metrics{grid-column:1/-1;margin:0!important;gap:12px!important;}
+ body #items .equipment-metrics>div{padding:12px!important;min-height:72px!important;}
+ body #items .equipment-metrics strong{font-size:27px!important;}
+ body #items .equipment-metrics :is(small,span){font-size:12px!important;}
+ body #items .equipment-controls{grid-column:1;margin:0!important;}
+ body #items .inventory-sortbar{grid-column:2;grid-row:2;margin:0!important;gap:8px!important;}
+ body #items .inventory-sortbar select{width:210px!important;}
+ body #items .equipment-filters{grid-column:2;grid-row:3;margin:0!important;justify-self:end;}
+ body #items .inventory-results{grid-column:1;grid-row:3;align-self:center;font-size:12px!important;margin:0!important;}
+ body #items #itemlist.equipment-grid:not(.equipment-list){grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:16px!important;}
+ body #items #itemlist .equipment-tile{padding:16px!important;min-height:152px!important;gap:16px!important;border-radius:16px!important;}
+ body #items #itemlist .equipment-tile-name{font-size:15px!important;line-height:1.35!important;}
+ body #items #itemlist .equipment-icon{width:54px!important;height:54px!important;}
+ body #items #itemlist .equipment-tile-stats small{font-size:12px!important;}
+ body #items #itemlist .equipment-tile-stats strong{font-size:24px!important;}
+ body #items #itemlist .equipment-tile-right strong{font-size:16px!important;}
+ body #items #itemlist.equipment-list{grid-template-columns:1fr!important;}
+ body #items #itemlist.equipment-list .equipment-tile{display:grid!important;grid-template-columns:minmax(0,1fr) 280px!important;min-height:84px!important;padding:12px 18px!important;}
+ body #items #itemlist.equipment-list .equipment-tile-stats{display:grid!important;grid-template-columns:1fr 1fr!important;width:280px!important;}
+ body #items #itemlist.equipment-list .equipment-tile-stats>span:first-child{display:grid!important;}
+ /* Roadmap and settings use available horizontal space. */
+ body #upgrades:not(.hide){display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start;}
+ body #upgrades .upgrade-hero{grid-column:1;grid-row:1;margin:0!important;padding:20px!important;}
+ body #upgrades .upgrade-metrics{grid-column:2;grid-row:1;align-self:stretch;margin:0!important;}
+ body #upgrades .upgrade-metrics>div{justify-content:center;padding:18px!important;}
+ body #upgrades .upgrade-section{margin:0!important;padding:20px!important;min-width:0;}
+ body #upgrades .upgrade-section h3{font-size:18px!important;}
+ body #upgrades .upgrade-section-description{font-size:13px!important;line-height:1.5!important;}
+ body #upgrades #needs:empty::after{content:"No items ready to bind. Add your caught Aniimo and inventory to see recommendations.";display:block;padding:18px 0 4px;color:var(--muted);font-size:14px;line-height:1.6;}
+ body #upgrades #shortages:empty::after{content:"No missing items to show for your current selection.";display:block;padding:16px 0 4px;color:var(--muted);font-size:14px;line-height:1.6;}
+ body #settings:not(.hide){display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px!important;align-items:start;}
+ body #settings .settings-card{margin:0!important;}
+ body #settings :is(.settings-footer,.settings-bottom){grid-column:1/-1;}
+ body #aniimoScrollTop{bottom:24px!important;}
+}
+@media(min-width:1200px){
+ body header.app-header{padding-right:0!important;min-height:102px!important;}
+ body .app-header .app-brand{max-width:calc(50% - 265px)!important;}
+ body .app-header .header-actions{max-width:calc(50% - 265px)!important;flex-wrap:wrap!important;justify-content:flex-end!important;}
+ body nav#tabs.tabs{position:absolute!important;top:25px!important;left:50%!important;right:auto!important;bottom:auto!important;transform:translateX(-50%)!important;width:500px!important;margin:0!important;}
+}
+@media(min-width:1024px){
+ body #collection#collection #creatures.grid[data-layout="large"] article.creature>.body{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-auto-rows:auto!important;align-content:start!important;align-items:center!important;}
+ body #collection#collection #creatures.grid[data-layout="large"] article.creature>.body>:is(.card-name-row,.card-badges,.finish-reminder,.cardactions){grid-column:1/-1!important;}
+ body #collection#collection #creatures.grid[data-layout="large"] article.creature>.body>.card-name-row{order:0!important;}
+ body #collection#collection #creatures.grid[data-layout="large"] article.creature>.body>.finish-reminder{order:2!important;}
+ body #collection#collection #creatures.grid[data-layout="large"] article.creature>.body>.card-origin{grid-column:1!important;align-self:stretch!important;display:flex!important;align-items:center!important;}
+ body #collection#collection #creatures.grid[data-layout="large"] article.creature>.body>.held-chip{grid-column:2!important;align-self:stretch!important;}
+ body #collection#collection #creatures.grid[data-layout="large"] article.creature>.body>.cardactions{margin-top:0!important;}
+}
+@media(min-width:1024px){
+ body #collection#collection #creatures.grid[data-layout="cards"] article.creature>.card-topline{grid-template-columns:minmax(0,1fr) 58px 30px!important;grid-template-rows:auto!important;height:54px!important;min-height:54px!important;}
+ body #collection#collection #creatures.grid[data-layout="cards"] article.creature>.card-topline>:is(.completed-custom-name,.incomplete-header-name){grid-row:1!important;grid-column:1!important;}
+ body #collection#collection #creatures.grid[data-layout="cards"] article.creature>.card-topline>.card-index{grid-row:1!important;grid-column:2!important;}
+ body #collection#collection #creatures.grid[data-layout="cards"] article.creature>.card-topline>.favorite-toggle{grid-row:1!important;grid-column:3!important;}
+ body #collection#collection #creatures.grid:is([data-layout="large"],[data-layout="cards"]) article.creature .portrait>.art-window{width:100%!important;height:250px!important;max-width:100%!important;aspect-ratio:auto!important;margin:0!important;padding:0!important;display:flex!important;align-items:center!important;justify-content:center!important;}
+ body #collection#collection #creatures.grid:is([data-layout="large"],[data-layout="cards"]) article.creature>.body>.card-badges>*{width:auto!important;max-width:100%!important;flex:0 1 auto!important;flex-basis:auto!important;margin:0!important;}
+ body #collection#collection #creatures.grid:is([data-layout="large"],[data-layout="cards"]) article.creature>.body>.card-badges .acquisition-top{display:inline-flex!important;}
+ body #collection#collection #creatures.grid[data-layout="compact"] article.creature .portrait>.art-window{width:100%!important;height:100%!important;max-width:100%!important;aspect-ratio:auto!important;margin:0!important;}
+}
+@media(min-width:1024px){
+ body #collection#collection #creatures.grid:is([data-layout="large"],[data-layout="cards"]) article.creature>.body>.card-badges{flex-direction:row!important;justify-content:flex-start!important;}
+}
+
+</style><style id="desktop-workbench-style">#desktopBrowse,#desktopUndo,.desk-card-summary{display:none;}
+@media(min-width:1024px){
+ #desktopBrowse{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin:0 0 16px;}
+ .desk-counts{display:flex;flex-wrap:wrap;gap:8px;}
+ .desk-counts button{border:1px solid var(--line);border-radius:10px;padding:10px 13px;background:var(--panel);color:var(--muted);font-weight:650;font-size:13px;}
+ .desk-counts button:first-child{color:var(--green);background:var(--ui-accent-soft,var(--panel));}
+ .desk-counts button:nth-child(2){color:var(--yellow);}
+ .desk-sort{display:flex;gap:9px;align-items:center;font-size:13px;color:var(--muted);}
+ .desk-sort select{padding:9px 12px;min-width:200px;}
+ .desk-filter-note{flex-basis:100%;font-size:13px;color:var(--muted);display:flex;gap:8px;align-items:center;}
+ .desk-filter-note button{background:none;color:var(--green);border:0;text-decoration:underline;}
+ body #collection#collection #creatures article[hidden]{display:none!important;}
+ body #collection#collection #creatures article.desk-selected{outline:2px solid var(--green);outline-offset:3px;}
+ body #collection#collection #creatures article .desk-card-summary{display:flex!important;grid-column:1/-1!important;order:6!important;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding:10px 0 0;margin-top:0;font-size:12px;color:var(--muted);}
+ .desk-card-summary button{border:0;background:none;color:var(--green);font-weight:650;white-space:nowrap;padding:4px;}
+ #collectionDimensions>[role=button],#equipmentMetrics>[role=button]{cursor:pointer;}
+ #collectionDimensions>[role=button]:hover,#equipmentMetrics>[role=button]:hover{outline:1px solid var(--green);outline-offset:2px;}
+ body #modal.desktop-drawer{display:block!important;inset:12px 12px 12px auto!important;width:min(640px,calc(100vw - 360px))!important;max-width:none!important;background:none!important;backdrop-filter:none!important;padding:0!important;pointer-events:none;z-index:200;}
+ body #modal.desktop-drawer.hide{display:none!important;}
+ body #modal.desktop-drawer #dialog{pointer-events:auto;width:100%!important;max-width:none!important;height:100%!important;max-height:none!important;border-radius:20px!important;border:1px solid var(--line)!important;padding:0 22px 24px!important;overflow:auto!important;overscroll-behavior:contain;box-shadow:-16px 0 60px #0006!important;background:var(--panel)!important;}
+ .desk-drawer-nav{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:4px;flex-wrap:wrap;background:var(--panel);border-bottom:1px solid var(--line);padding:13px 0;margin:0 0 18px;}
+ .desk-drawer-nav>strong{flex-basis:100%;font-size:15px;margin-bottom:6px;}
+ .desk-drawer-nav button{border:1px solid transparent;background:transparent;color:var(--muted);padding:8px 10px;font-size:13px;border-radius:8px;}
+ .desk-drawer-nav button.active{color:var(--green);background:var(--ui-accent-soft,var(--panel2));border-color:var(--line);}
+ .desk-drawer-nav .desk-prev{margin-left:auto;}
+ .desk-overview-head{display:grid;grid-template-columns:150px minmax(0,1fr);gap:18px;align-items:center;}
+ .desk-overview-art{height:190px;overflow:hidden;border-radius:14px;background:var(--panel2);}
+ .desk-overview-art :is(.art-window,img){width:100%!important;height:100%!important;object-fit:contain!important;transform:none!important;}
+ .desk-overview-head h2{font-size:25px!important;margin:8px 0!important;}
+ .desk-overview-head p{color:var(--muted);font-size:13px;}
+ .desk-task-section,.desk-build-section,.desk-source-section{border-top:1px solid var(--line);margin-top:20px;padding-top:10px;}
+ #deskTaskList{display:grid;gap:7px;}
+ .desk-task{background:var(--panel2);border:1px solid var(--line);color:var(--text);padding:13px;border-radius:10px;text-align:left;font-size:14px;}
+ .desk-task.done{color:var(--green);}
+ .desk-build-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}
+ .desk-build-grid>div{display:grid;gap:9px;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);}
+ .desk-build-grid strong{font-size:12px;color:var(--muted);}.desk-build-grid span{font-variant-numeric:tabular-nums;font-size:15px;}
+ #desktopUndo{position:fixed;left:24px;bottom:24px;z-index:100000;display:flex;align-items:center;gap:14px;max-width:calc(100vw - 48px);background:var(--panel);color:var(--text);border:1px solid var(--green);padding:12px 16px;border-radius:14px;box-shadow:0 8px 32px #0005;font-size:14px;}
+ #desktopUndo button{background:none;border:0;color:var(--green);font-weight:700;padding:8px;}
+ body :is(.desk-task,.desk-counts button,.desk-card-summary button,.equipment-tile,.creature,.upgrade-plan-action){transition:border-color .15s,box-shadow .15s;}
+ body :is(.desk-task,.desk-counts button,.equipment-tile,.upgrade-plan-action):hover{border-color:var(--green)!important;box-shadow:0 0 0 1px var(--green);}
+ body :is(button,[role=button],select,input):focus-visible{outline:2px solid var(--green)!important;outline-offset:3px!important;}
+ #upgrades .upgrade-plan-card{grid-template-columns:48px minmax(0,1fr)!important;}
+ #upgrades .upgrade-plan-action{grid-column:2;justify-self:start;font-size:13px!important;}
+ @media(prefers-reduced-motion:reduce){body :is(.desk-task,.desk-counts button,.desk-card-summary button,.equipment-tile,.creature,.upgrade-plan-action){transition:none!important;}}
+}
+@media(min-width:1024px){
+ body #modal.desktop-drawer #dialog .desk-overview-art{position:relative!important;width:150px!important;height:190px!important;min-width:0!important;overflow:hidden!important;}
+ body #modal.desktop-drawer #dialog .desk-overview-art .art-window{position:relative!important;inset:auto!important;width:100%!important;height:100%!important;min-height:0!important;max-height:190px!important;aspect-ratio:auto!important;transform:none!important;display:flex!important;align-items:center!important;justify-content:center!important;}
+ body #modal.desktop-drawer #dialog .desk-overview-art img.creature-art{position:static!important;inset:auto!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:190px!important;object-fit:contain!important;transform:none!important;}
+ body #modal.desktop-drawer #dialog .desk-overview-art .art-caption{display:none!important;}
+ .desk-source-section .bloom-acquisition-link{display:flex;flex-direction:column;align-items:flex-start;gap:8px;position:relative;width:100%;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--panel2);color:var(--muted);font-size:14px;}
+ .desk-source-section .bloom-info-chevron{position:absolute;right:14px;top:50%;}
+}
+@media(min-width:1700px){
+ body:has(#modal.desktop-drawer:not(.hide)) main.shell{width:calc(100% - 720px)!important;max-width:1440px!important;margin-left:32px!important;margin-right:auto!important;}
+ body:has(#modal.desktop-drawer:not(.hide)) #collection>.toolbar{grid-column:span 7!important;}
+ body:has(#modal.desktop-drawer:not(.hide)) #collection>.collection-filters{grid-column:span 5!important;}
+ body:has(#modal.desktop-drawer:not(.hide)) #collection>.layout-toolbar{grid-column:1/-1!important;}
+}
+</style><script id="desktop-workbench">/* Desktop workbench: original editors and mobile presentation remain authoritative. */
+(()=>{
+ const screen=matchMedia('(min-width:1024px)'), $=id=>document.getElementById(id);
+ const prefix=SAVE_KEY+'::workbench::';
+ const read=(key,fallback)=>{try{return localStorage.getItem(prefix+key)||fallback}catch{return fallback}};
+ const write=(key,value)=>{try{localStorage.setItem(prefix+key,value)}catch{}};
+ const validLayout=v=>['large','cards','compact'].includes(v);
+ const initialLayout=data.collectionView.layout;
+ let mode=screen.matches?'desktop':'mobile',sort=read('sort','aniilog'),focusFilter='',selected='',launcher=null,pending=null;
+ if(!read('mobile-layout',''))write('mobile-layout',initialLayout);
+ const remembered=read(mode+'-layout',initialLayout);if(validLayout(remembered))data.collectionView.layout=remembered;
+ const originalRender=window.render,originalLayout=window.setCollectionLayout,originalManage=window.managePrismana,originalCompact=window.openCompactCompanion,originalClose=window.closeDialog;
+ const legacyLayoutKey=originalLayout.toString().match(/localStorage\.setItem\(['"]([^'"]+)/)?.[1];
+ const syncLegacy=()=>{try{if(legacyLayoutKey)localStorage.setItem(legacyLayoutKey,data.collectionView.layout)}catch{}};syncLegacy();
+ const tasks=c=>profileChecklist(c), incomplete=c=>c.caught&&!profileFullyDone(c);
+ const cByName=name=>data.creatures.find(c=>c.name===name);
+ const missingRows=()=>bindingRequirements(false).filter(r=>r.short>0);
+ const plannedReady=()=>{const remaining=Object.create(null),names=new Set();for(const c of data.creatures){if(!readyToBind(c))continue;if(!(c.ideal in remaining))remaining[c.ideal]=Math.max(0,available(c.ideal));if(remaining[c.ideal]>0){names.add(c.name);remaining[c.ideal]--}}return names};
+ const compare=(a,b)=>{
+  if(sort==='name')return displayName(a).localeCompare(displayName(b))||aniilogOrder(a,b);
+  if(sort==='favorites')return Number(!!b.favorite)-Number(!!a.favorite)||aniilogOrder(a,b);
+  if(sort==='incomplete')return Number(incomplete(b))-Number(incomplete(a))||aniilogOrder(a,b);
+  if(sort==='ready')return Number(readyToBind(b))-Number(readyToBind(a))||aniilogOrder(a,b);
+  return aniilogOrder(a,b);
+ };
+ function button(text,action,cls=''){const el=document.createElement('button');el.type='button';el.className=cls;el.textContent=text;el.onclick=action;return el;}
+ function overview(c){
+  const build=data.builds?.[c.name],known=build?.userConfirmedBuild===true;
+  $('dialog').innerHTML=`<div class="desk-overview-head"><div class="desk-overview-art">${portraitFor(c)}</div><div><span class="section-eyebrow">COMPANION OVERVIEW · ${numberFor(c)}</span><h2>${esc(profileFullyDone(c)?personalizedName(c):displayName(c))}</h2><p>${c.caught?'Caught':'Not caught'}${c.alpha?' · Alpha':''}</p>${combatRoleCard(c)}<p class="hint">${esc(c.ideal||'No verified recommendation')}${c.ideal?' · '+(hasBinding(c,c.ideal)?'Bound':readyToBind(c)?'Ready to bind':'Recommended'):''}</p></div></div><section class="desk-task-section"><div class="row"><h3>Profile progress</h3><strong>${tasks(c).filter(t=>t.done).length} / ${tasks(c).length}</strong></div><div id="deskTaskList"></div></section><section class="desk-build-section"><div class="row"><h3>Capability points</h3><span class="hint">${known?'Your confirmed build':'No confirmed build'}</span></div>${known?`<p class="hint">${Number(build.stars)||'—'} stars · ${build.observedSpent??'—'} awakening points · ${build.capafruit?'Capafruit recorded':'Capafruit not recorded'}</p><div class="desk-build-grid">${['ATK','REGEN','BREAK','P.DEF','M.DEF','HP'].map((s,i)=>`<div><strong>${s}</strong><span>${build.innate?.[i]??'—'} / ${build.spent?.[i]??'—'} / ${build.bonuses?.[i]??'—'}</span></div>`).join('')}</div><p class="hint">Innate / acquired / bonus</p>`:'<p class="hint">Scan an Awakening screenshot or enter your values to get build recommendations.</p>'}<div id="deskBuildAction"></div></section><section class="desk-source-section"><h3>Acquisition</h3>${cardBloomLocation(c)}</section>`;
+  for(const task of tasks(c)){
+   const el=button((task.done?'✓ ':'○ ')+task.label,()=>{if(task.tab==='collection'){desktopToggleCaught(c.name);desktopOpen(c.name)}else if(task.tab==='personality'){openPersonalityFromCard(c.name);decorateDrawer(c.name,'personality')}else desktopOpen(c.name,task.tab)},'desk-task '+(task.done?'done':''));
+   $('deskTaskList').append(el);
+  }
+  $('deskBuildAction').append(button(known?'Edit build & recommendations':'Set up capability build',()=>desktopOpen(c.name,'build'),'btn primary'));
+ }
+ function decorateDrawer(name,tab){
+  if(!screen.matches)return;selected=name;
+  const modal=$('modal'),dialog=$('dialog');modal.classList.add('desktop-drawer');modal.classList.remove('hide');dialog.setAttribute('role','region');dialog.setAttribute('aria-label','Companion details');
+  dialog.querySelector('.desk-drawer-nav')?.remove();
+  const bar=document.createElement('div');bar.className='desk-drawer-nav';
+  const title=document.createElement('strong');title.textContent=displayName(cByName(name));bar.append(title);
+  for(const [key,label] of [['overview','Overview'],['build','Build'],['appearance','Looks'],['item','Items']]){const el=button(label,()=>desktopOpen(name,key),tab===key?'active':'');el.setAttribute('aria-pressed',String(tab===key));bar.append(el)}
+  bar.append(button('‹',()=>step(-1),'desk-prev'),button('›',()=>step(1),'desk-next'),button('✕',()=>closeDialog(),'desk-close'));
+  bar.querySelector('.desk-prev').setAttribute('aria-label','Previous Aniimo');bar.querySelector('.desk-next').setAttribute('aria-label','Next Aniimo');bar.querySelector('.desk-close').setAttribute('aria-label','Close details');
+  dialog.prepend(bar);highlight();
+ }
+ function step(delta){const names=[...$('creatures').querySelectorAll('article:not([hidden])')].map(x=>x.dataset.species),index=names.indexOf(selected);if(names.length)desktopOpen(names[(Math.max(0,index)+delta+names.length)%names.length]);}
+ window.desktopOpen=(name,tab='overview')=>{
+  const c=cByName(name);if(!c)return;
+  if(!screen.matches){originalManage(name,tab==='overview'?'build':tab);return}
+  const opening=$('modal').classList.contains('hide');if(opening)launcher=document.activeElement;
+  if(tab==='equipment')tab='item';
+  if(tab==='overview')overview(c);else originalManage(name,tab==='item'?'equipment':tab);
+  decorateDrawer(name,tab);$('dialog').scrollTop=0;if(opening)$('dialog').querySelector('.desk-drawer-nav button')?.focus({preventScroll:true});
+ };
+ window.managePrismana=(name,tab='build')=>screen.matches?desktopOpen(name,tab):originalManage(name,tab);
+ window.openCompactCompanion=name=>screen.matches?desktopOpen(name):originalCompact(name);
+ window.closeDialog=()=>{const drawer=$('modal').classList.contains('desktop-drawer');originalClose();$('modal').classList.remove('desktop-drawer');$('dialog').removeAttribute('role');$('dialog').removeAttribute('aria-label');selected='';highlight();if(drawer&&launcher?.isConnected)launcher.focus({preventScroll:true});};
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('modal').classList.contains('desktop-drawer')&&!$('modal').classList.contains('hide')){e.preventDefault();closeDialog()}});
+ function highlight(){document.querySelectorAll('#creatures article').forEach(el=>el.classList.toggle('desk-selected',!!selected&&el.dataset.species===selected));}
+ function focusCollection(filter){
+  focusFilter=filter;$('search').value='';data.collectionView.region='all';data.collectionView.favoritesOnly=false;multiFilters.collection=[];
+  document.querySelector('#tabs [data-tab="collection"]').click();render();$('desktopBrowse').scrollIntoView({block:'nearest'});
+ }
+ function summary(){
+  let root=$('desktopBrowse');if(!root){root=document.createElement('div');root.id='desktopBrowse';$('creatures').before(root)}
+  const ready=plannedReady().size,needs=data.creatures.filter(incomplete).length,short=missingRows().reduce((n,r)=>n+r.short,0);
+  root.replaceChildren();
+  const counts=document.createElement('div');counts.className='desk-counts';
+  counts.append(button(ready+' ready to bind',()=>focusCollection('ready')),button(needs+' need profile details',()=>focusCollection('incomplete')),button(short+' copies to obtain',()=>{document.querySelector('#tabs [data-tab="upgrades"]').click();$('shortages').scrollIntoView({block:'nearest'})}));
+  const label=document.createElement('label');label.className='desk-sort';label.textContent='Sort ';const select=document.createElement('select');select.setAttribute('aria-label','Sort collection');
+  for(const [value,text] of [['aniilog','Aniilog order'],['favorites','Favorites first'],['incomplete','Incomplete profiles first'],['name','Name A–Z'],['ready','Ready to bind first']]){const opt=new Option(text,value);select.add(opt)}select.value=sort;select.onchange=()=>{sort=select.value;write('sort',sort);render()};label.append(select);root.append(counts,label);
+  if(focusFilter){const filter=document.createElement('div');filter.className='desk-filter-note';filter.append(document.createTextNode('Showing '+({ready:'Aniimo ready to bind',incomplete:'profiles needing details',caught:'caught Aniimo',configured:'configured profiles'}[focusFilter]||focusFilter)+' '),button('Clear',()=>{focusFilter='';render()}));root.append(filter)}
+ }
+ window.inventoryMatches=(entry,id)=>{const [item,n]=entry,free=Math.max(0,available(item)),need=data.creatures.filter(c=>c.caught&&!c.alpha&&c.ideal===item&&!hasBinding(c,item)).length;return id==='owned'?n>0:id==='available'?free>0:id==='bound'?boundCount(item)>0:id==='needed'?need>free:true};
+ function enhance(){
+  if(!screen.matches)return;
+  renderPlanningExtras();
+  const planned=plannedReady(),readyCards=document.createDocumentFragment();
+  for(const name of planned){const c=cByName(name),card=document.createElement('div');card.className='upgrade-plan-card';const art=document.createElement('div');art.className='upgrade-plan-art';art.innerHTML=heldThumb(c.ideal);const info=document.createElement('div');info.className='upgrade-plan-info';const title=document.createElement('strong');title.textContent='Bind '+c.ideal+' to '+displayName(c);const sub=document.createElement('span');sub.textContent=c.ideal;const note=document.createElement('small');note.className='upgrade-ready-label';note.textContent='✓ '+Math.max(0,available(c.ideal))+' free in inventory · Ready to bind';info.append(title,sub,note);const action=button('Review binding ›',()=>desktopOpen(name,'item'),'upgrade-plan-action');action.setAttribute('aria-label',title.textContent);card.append(art,info,action);readyCards.append(card)}
+  if(planned.size)$('needs').replaceChildren(readyCards);
+  $('readyMetric').textContent=planned.size;$('bindCount').textContent=planned.size;
+  const farmCount=bindingRequirements($('includeFutureItems').checked).filter(r=>r.short>0).reduce((n,r)=>n+r.short,0);
+  $('bindingSummary').textContent=planned.size+' ready to bind · '+farmCount+' copies to farm'+($('includeFutureItems').checked?' including future catches':'')+'.';
+  summary();
+  const cards=[...$('creatures').querySelectorAll('article')];cards.sort((a,b)=>compare(cByName(a.dataset.species),cByName(b.dataset.species)));
+  let visible=0;
+  for(const card of cards){const c=cByName(card.dataset.species);const show=!focusFilter||(focusFilter==='ready'?plannedReady().has(c.name):focusFilter==='incomplete'?incomplete(c):focusFilter==='caught'?c.caught:c.caught&&speciesRules(c).buildEligible!==false&&tasks(c).every(t=>t.done));card.hidden=!show;if(show)visible++;$('creatures').append(card);
+   if(data.collectionView.layout==='compact'){card.setAttribute('role','button');card.tabIndex=0;card.setAttribute('aria-label','Open '+displayName(c)+' details');card.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();desktopOpen(c.name)}}}
+   if(data.collectionView.layout!=='compact'){
+    const panel=document.createElement('div');panel.className='desk-card-summary';const b=data.builds?.[c.name];
+    const meta=document.createElement('span');meta.textContent=(c.caught?tasks(c).filter(x=>x.done).length+'/'+tasks(c).length+' profile steps':'View acquisition and setup')+(b?.userConfirmedBuild?' · '+(b.stars||'—')+' stars':'')+(readyToBind(c)?' · Ready to bind':'');panel.append(meta,button('Overview ›',()=>desktopOpen(c.name)));card.querySelector('.body').append(panel);
+   }
+  }
+  $('collectionCount').textContent=visible+' / '+data.creatures.length+' companions';
+  let empty=$('desktopFilteredEmpty');if(focusFilter&&visible===0){if(!empty){empty=document.createElement('div');empty.id='desktopFilteredEmpty';empty.className='collection-empty';$('creatures').append(empty)}empty.textContent='No Aniimo match this selection.'}else empty?.remove();
+  const dim=$('collectionDimensions');[...dim.children].forEach((el,i)=>{el.tabIndex=0;el.setAttribute('role','button');el.setAttribute('aria-label',i?'Show configured profiles':'Show caught Aniimo');el.onclick=()=>focusCollection(i?'configured':'caught');el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();el.click()}}});
+  const em=$('equipmentMetrics');[...em.children].forEach((el,i)=>{el.tabIndex=0;el.setAttribute('role','button');el.onclick=()=>{if(i===2){document.querySelector('#tabs [data-tab="upgrades"]').click();$('shortages').scrollIntoView({block:'nearest'});return}multiFilters.inventory=[i===0?'owned':'available'];$('itemsearch').value='';render()};el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();el.click()}}});
+  document.querySelectorAll('#needs .upgrade-plan-card').forEach(el=>{const action=el.querySelector('.upgrade-plan-action'),info=el.querySelector('.upgrade-plan-info');if(!action||!info)return;const label=action.getAttribute('aria-label');info.querySelector('strong').textContent=label;action.textContent='Review binding ›';});
+  highlight();
+ }
+ window.render=function(...args){const result=originalRender.apply(this,args);enhance();return result};
+ window.setCollectionLayout=layout=>{originalLayout(layout);write(mode+'-layout',data.collectionView.layout)};
+ // Undo only the specific fields changed, with a guard against later edits.
+ function notify(message,undo,valid){pending={undo,valid};let toast=$('desktopUndo');if(!toast){toast=document.createElement('div');toast.id='desktopUndo';toast.setAttribute('role','status');toast.setAttribute('aria-live','polite');document.body.append(toast)}toast.replaceChildren();const text=document.createElement('span');text.textContent=message;toast.append(text,button('Undo',()=>{if(!pending)return;if(!pending.valid()){text.textContent='This entry changed again. The latest changes were kept.';pending=null;toast.querySelector('button').remove();return}const apply=pending.undo;pending=null;apply();render();toast.remove();}),button('✕',()=>{pending=null;toast.remove()}));toast.lastChild.setAttribute('aria-label','Dismiss confirmation');}
+ const caughtFields=c=>JSON.stringify([c.caught,c.bound,c.boundItems,c.boundDisplay]);
+ const originalCaught=window.toggleCaught;
+ window.desktopToggleCaught=window.toggleCaught=name=>{if(!screen.matches)return originalCaught(name);const c=cByName(name);if(!c)return;const before=structuredClone(c),old=caughtFields(c);const result=originalCaught(name);if(c.caught!==before.caught&&!c.caught){c.boundItems=[];c.boundDisplay=null;render()}if(caughtFields(c)!==old){const after=caughtFields(c);notify(displayName(c)+(c.caught?' marked caught':' marked not caught'),()=>{for(const key of ['caught','bound','boundItems','boundDisplay']){if(Object.hasOwn(before,key))c[key]=structuredClone(before[key]);else delete c[key]}},()=>caughtFields(c)===after)}return result};
+ for(const [name,itemArg] of [['changeQty',false],['setEquipmentQuantity',true]]){const original=window[name];window[name]=function(...args){if(!screen.matches)return original.apply(this,args);const item=itemArg?decodeURIComponent(args[0]):args[0],before=data.items[item];const result=original.apply(this,args);const after=data.items[item];if(before!==after)notify(item+': '+after+' owned',()=>{data.items[item]=before;const input=$('equipmentQuantity');if(input)input.value=before},()=>data.items[item]===after&&before>=boundCount(item));return result};}
+ // Keep drawer styling with internal editors; clear it for unrelated modal dialogs.
+ new MutationObserver(()=>{if($('modal').classList.contains('hide')&&$('modal').classList.contains('desktop-drawer')){$('modal').classList.remove('desktop-drawer');selected='';highlight()}}).observe($('modal'),{attributes:true,attributeFilter:['class']});
+ document.querySelector('#tabs').addEventListener('click',()=>{if($('modal').classList.contains('desktop-drawer'))closeDialog()},true);
+ $('includeFutureItems').addEventListener('change',()=>{if(screen.matches)enhance()});
+ screen.addEventListener('change',()=>{write(mode+'-layout',data.collectionView.layout);mode=screen.matches?'desktop':'mobile';const next=read(mode+'-layout',initialLayout);if(!screen.matches){$('desktopBrowse')?.remove();$('desktopUndo')?.remove();focusFilter='';if($('modal').classList.contains('desktop-drawer'))closeDialog();}if(validLayout(next))data.collectionView.layout=next;syncLegacy();render()});
+ render();
+})();
+</script></body></html>
